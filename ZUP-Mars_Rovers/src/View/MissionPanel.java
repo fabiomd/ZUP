@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import Classes.Map;
@@ -11,6 +12,7 @@ import Classes.Map;
 @SuppressWarnings("serial")
 public class MissionPanel extends JFrame{
 	private Map map;
+	private ImageIcon robot= (new ImageIcon("Path/To/Your/Image.png"));
 	
 	public MissionPanel(Map map){
 		setMap(map);
@@ -21,6 +23,7 @@ public class MissionPanel extends JFrame{
 		pack();
 		setLocationRelativeTo(null);
 		setResizable(false);
+		setBackground(Color.red);
 	}
 	
 	public void paint(Graphics g){
@@ -33,6 +36,10 @@ public class MissionPanel extends JFrame{
 		}
 	}
 
+	public void UpdateRobotPosition(){
+		
+	}
+	
 	public Map getMap() {
 		return map;
 	}

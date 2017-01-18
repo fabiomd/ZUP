@@ -1,5 +1,15 @@
 package Directions;
+/*
+ * Author: Fábio Moreira Duarte
+ * Date : 01/18/2017
+ * */
 
-public class South implements Direction{
+//South é uma dimensao com valor de influencia 0,-1
+
+public class South extends Direction2D{
+
+	public South() {
+		super(0,-1);
+	}
 
 }

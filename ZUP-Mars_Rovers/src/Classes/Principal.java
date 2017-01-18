@@ -26,6 +26,6 @@ public class Principal {
 		entrace.add("3 3 E");
 		entrace.add("MMRMMRMRRM");
 		Mars_Rovers.Contact(entrace);
-		View view  = new View(Mars_Rovers.getMap());
+		View view  = new View(Mars_Rovers);
 	}
 }

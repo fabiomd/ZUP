@@ -9,7 +9,8 @@ package Classes;
 
 import java.util.ArrayList;
 
-import View.MissionPanel;
+import View.View;
+
 
 public class Principal {
 	public static void main(String[] args) {
@@ -25,6 +26,6 @@ public class Principal {
 		entrace.add("3 3 E");
 		entrace.add("MMRMMRMRRM");
 		Mars_Rovers.Contact(entrace);
-		MissionPanel panel = new MissionPanel(Mars_Rovers.getMap());
+		View view  = new View(Mars_Rovers.getMap());
 	}
 }

@@ -33,12 +33,12 @@ public class Principal {
 			text = scanner.nextLine();
 			if(text.equals("EXIT") || text.equals(""))
 				break;
-			entrace.add(text);
+			entrace.add(text.toUpperCase());
 			System.out.print("Commando: ");
 			text = scanner.nextLine();
 			if(text.equals("EXIT") || text.equals(""))
 				break;
-			entrace.add(text);
+			entrace.add(text.toUpperCase());
 			Mars_Rovers.Contact(entrace);
 			entrace = new ArrayList<String>();
 		}

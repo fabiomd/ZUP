@@ -1,5 +1,6 @@
 package View;
 import javax.swing.JFrame;
+import javax.swing.JTextField;
 
 /*
  * Author: Fábio Moreira Duarte

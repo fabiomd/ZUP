@@ -60,7 +60,8 @@ public class Grid extends JPanel{
             	g.drawString("("+ i + "," + (getSpaceV().getMap().getDimension().getY() - j + 1) +")", i * distBetweenLinesX, j * distBetweenLinesY);
             }
         }
-        DrawRobot(g,getSpaceV().getCurrentPosition().getX(),getSpaceV().getMap().getDimension().getY() - getSpaceV().getCurrentPosition().getY());
+        if(getSpaceV().getCurrentPosition() != null && getSpaceV().getMap().getDimension() != null)
+        	DrawRobot(g,getSpaceV().getCurrentPosition().getX(),getSpaceV().getMap().getDimension().getY() - getSpaceV().getCurrentPosition().getY());
     }
 
     //Tem como objetivo atualizar a image atual do robo, para causar efeito de rotacao

@@ -31,14 +31,6 @@ public class SpaceVehicle {
 	//Funcao por onde os comandos deve ser passado com intuito de controlar o veiculo
 	public void Contact(ArrayList<String> commands){
 		getController().readCommands(commands);
-		try{
-			getCurrentPosition().Print();
-			System.out.print(" ");
-			getDirectionFaced().Print();
-			System.out.println("");
-		}catch(NullPointerException e){
-			System.out.println(e + ": Falha ao inicializar posicao ou direcao");
-		}
 	}
 	
 	

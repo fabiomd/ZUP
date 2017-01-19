@@ -47,9 +47,18 @@ public class Grid extends JPanel{
         g.setColor(Color.BLACK);
         g.drawRect(10, 10, 800, 500);
 
-        for(int i = 0;i<getSize().getWidth();i++){
+        for(int i = 0;i<getSpaceV().getMap().getDimension().getX() + 1;i++){
         	g.drawLine(distBetweenLinesX * i, 0, distBetweenLinesX*i, (int) getSize().getHeight());
+        	//g.drawLine(0,distBetweenLinesY * i, (int) getSize().getWidth(), distBetweenLinesY * i);
+        }
+        for(int i = 0;i<getSpaceV().getMap().getDimension().getY() + 1;i++){
+        	//g.drawLine(distBetweenLinesX * i, 0, distBetweenLinesX*i, (int) getSize().getHeight());
         	g.drawLine(0,distBetweenLinesY * i, (int) getSize().getWidth(), distBetweenLinesY * i);
+        }
+        for(int i=0;i<getSpaceV().getMap().getDimension().getX() + 1;i++){
+        	for(int j=0;j<getSpaceV().getMap().getDimension().getY() + 2;j++){
+            	g.drawString("("+ i + "," + (getSpaceV().getMap().getDimension().getY() - j + 1) +")", i * distBetweenLinesX, j * distBetweenLinesY);
+            }
         }
         DrawRobot(g,getSpaceV().getCurrentPosition().getX(),getSpaceV().getMap().getDimension().getY() - getSpaceV().getCurrentPosition().getY());
     }

@@ -39,8 +39,8 @@ public class Grid extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        distBetweenLinesX = (int) (getSize().getWidth() / map.getDimension().getX());
-        distBetweenLinesY = (int) (getSize().getHeight() / map.getDimension().getY());
+        distBetweenLinesX = (int) (getSize().getWidth() / (map.getDimension().getX()+1));
+        distBetweenLinesY = (int) (getSize().getHeight() / (map.getDimension().getY()+1));
         correctionX = (int)(distBetweenLinesX*.5f);
         correctionY = (int)(distBetweenLinesY*.5f);
       

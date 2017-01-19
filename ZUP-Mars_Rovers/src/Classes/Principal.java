@@ -17,15 +17,19 @@ public class Principal {
 		
 		SpaceVehicle Mars_Rovers = new SpaceVehicle();
 		ArrayList<String> entrace = new ArrayList<String>();
+		Mars_Rovers.mapCommand("5 5");
+		View view  = new View(Mars_Rovers);
+		view.setVisible(true);
 		
 		entrace.add("1 2 N");
 		entrace.add("LMLMLMLMM");
-		Mars_Rovers.mapCommand("5 5");
+		//Mars_Rovers.mapCommand("5 5");
 		Mars_Rovers.Contact(entrace);
 		entrace = new ArrayList<String>();
 		entrace.add("3 3 E");
 		entrace.add("MMRMMRMRRM");
 		Mars_Rovers.Contact(entrace);
-		View view  = new View(Mars_Rovers);
+		//View view  = new View(Mars_Rovers);
+		view.setVisible(true);
 	}
 }

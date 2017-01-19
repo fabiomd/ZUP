@@ -21,6 +21,7 @@ public class SpaceVehicle {
 	private Point2D currentPosition = null;
 	private Direction2D directionFaced = null;
 	private Map map = null;
+	private Event event = null;
 	
 	//Funcao para setar as dimensao do map, passada por string
 	public void mapCommand(String command){
@@ -54,8 +55,11 @@ public class SpaceVehicle {
 		return currentPosition;
 	}
 	public void setCurrentPosition(Point2D currentPosition) {
-		if(map.ValidePosition(currentPosition))
+		if(map.ValidePosition(currentPosition)){
 			this.currentPosition = currentPosition;
+			if(getEvent()!=null)
+				getEvent().Action();
+		}
 	}
 	
 	
@@ -64,6 +68,8 @@ public class SpaceVehicle {
 	}
 	public void setDirectionFaced(Direction2D directionFaced) {
 		this.directionFaced = directionFaced;
+		if(getEvent()!=null)
+			getEvent().Action();
 	}
 
 	public Map getMap() {
@@ -72,5 +78,13 @@ public class SpaceVehicle {
 
 	public void setMap(Map map) {
 		this.map = map;
+	}
+
+	public Event getEvent() {
+		return event;
+	}
+
+	public void setEvent(Event event) {
+		this.event = event;
 	}
 }
